@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Simular_Emprestimo.apps.Simular_EmprestimoConfig',
+    'sql_server.pyodbc',
+    'django_pyodbc',
 ]
 
 # Middleware framework
@@ -75,12 +78,21 @@ WSGI_APPLICATION = 'HackCaixa.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'HOST': 'dbhackathon.database.windows.net',
+        'PORT': '1433',
+        'NAME': 'hack',
+        'USER': 'hack',
+        'PASSWORD': 'Password23',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

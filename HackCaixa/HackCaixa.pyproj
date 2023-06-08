@@ -35,12 +35,24 @@
     <Compile Include="HackCaixa\settings.py" />
     <Compile Include="HackCaixa\urls.py" />
     <Compile Include="HackCaixa\wsgi.py" />
+    <Compile Include="Simular_Emprestimo\admin.py" />
+    <Compile Include="Simular_Emprestimo\apps.py" />
+    <Compile Include="Simular_Emprestimo\migrations\__init__.py" />
+    <Compile Include="Simular_Emprestimo\models.py" />
+    <Compile Include="Simular_Emprestimo\tests.py" />
+    <Compile Include="Simular_Emprestimo\views.py" />
+    <Compile Include="Simular_Emprestimo\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HackCaixa\" />
+    <Folder Include="Simular_Emprestimo\" />
+    <Folder Include="Simular_Emprestimo\migrations\" />
+    <Folder Include="Simular_Emprestimo\templates\" />
+    <Folder Include="Simular_Emprestimo\templates\Simular_Emprestimo\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
