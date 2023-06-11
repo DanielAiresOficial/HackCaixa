@@ -84,5 +84,6 @@ def simular_emprestimo(request):
             # Renderizar o template de resultado com o contexto
             return render(request, 'Simular_Emprestimo/resultado.html', context=context)
     return render(request, 'Simular_Emprestimo/index.html')
+
 def index(request):
     return render(request, 'Simular_Emprestimo/index.html')

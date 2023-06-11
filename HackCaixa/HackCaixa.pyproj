@@ -3,7 +3,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>HackCaixa</Name>
     <RootNamespace>HackCaixa</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Simular_Emprestimo\static\site.css" />
     <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\index.html" />
     <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\resultado.html" />
     <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\enviar_mensagem.html" />
@@ -53,6 +54,7 @@
     <Folder Include="HackCaixa\" />
     <Folder Include="Simular_Emprestimo\" />
     <Folder Include="Simular_Emprestimo\migrations\" />
+    <Folder Include="Simular_Emprestimo\static\" />
     <Folder Include="Simular_Emprestimo\templates\" />
     <Folder Include="Simular_Emprestimo\templates\Simular_Emprestimo\" />
   </ItemGroup>
@@ -66,6 +68,9 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
