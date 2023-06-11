@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/HackCaixa/env/Lib/site-packages/django_pyodbc_azure_2019-2.1.0.0.dist-info
