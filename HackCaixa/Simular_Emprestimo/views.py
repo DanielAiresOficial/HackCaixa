@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from azure.eventhub import EventHubProducerClient, EventData
 from .models import Produto
 import json
