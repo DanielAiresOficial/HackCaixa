@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprovante de envio de Mensagem</title>
+</head>
+<body>
+    {% if mensagem_enviada %}
+    <h1>Mensagem enviada com sucesso!</h1>
+    {% else %}
+    <h1>Enviar Mensagem</h1>
+    <form method="post" action="{% url 'enviar_mensagem_eventhub' %}">
+        {% csrf_token %}
+        <label for="mensagem">Mensagem:</label>
+        <input type="text" name="mensagem" id="mensagem">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    {% endif %}
+</body>
+</html>

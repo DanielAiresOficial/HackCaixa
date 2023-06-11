@@ -46,6 +46,8 @@
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\index.html" />
+    <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\resultado.html" />
+    <Content Include="Simular_Emprestimo\templates\Simular_Emprestimo\enviar_mensagem.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HackCaixa\" />

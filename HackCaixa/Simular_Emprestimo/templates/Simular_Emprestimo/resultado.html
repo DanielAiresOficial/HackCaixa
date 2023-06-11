@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hack Caixa - Resultado</title>
+</head>
+<body>
+    <h1>Obrigado pelo contato!</h1>
+    <h2>Simulações:</h2>
+
+    <h3>Tabela Price:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Parcela</th>
+                <th>Juros</th>
+                <th>Amortização</th>
+                <th>Saldo Devedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for parcela, juros, amortizacao, saldo_devedor in tabela_price %}
+            <tr>
+                <td>{{ parcela }}</td>
+                <td>{{ juros }}</td>
+                <td>{{ amortizacao }}</td>
+                <td>{{ saldo_devedor }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Tabela SAC:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Amortização</th>
+                <th>Saldo Devedor</th>
+                <th>Juros</th>
+                <th>Parcela</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for amortizacao, saldo_devedor, juros, parcela in tabela_sac %}
+            <tr>
+                <td>{{ amortizacao }}</td>
+                <td>{{ saldo_devedor }}</td>
+                <td>{{ juros }}</td>
+                <td>{{ parcela }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
